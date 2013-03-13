@@ -25,8 +25,7 @@ var findUnsafeElements = function() {
 	var classNames = [
 		'author',
 		'comment-body',
-		'xcTextValue',
-
+		'xcTextValue'
 	];
 	var els = [];
 	for (var i in classNames) {
