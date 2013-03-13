@@ -3,7 +3,7 @@
 
   "name": "Herp Derp for Finnish webpages",
   "description": "Inspired by \"Herp Derp for YouTube™\" -plugin, places herpder and kittens to some Finnish sites.",
-  "version": "0.0.2",
+  "version": "0.0.3",
 
   "content_scripts": [
     {

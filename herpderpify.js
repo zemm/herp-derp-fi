@@ -23,7 +23,7 @@ var handleElements = function() {
 
 var findUnsafeElements = function() {
 	var classNames = [
-		'author',
+		//'author',
 		'comment-body',
 		'xcTextValue'
 	];
