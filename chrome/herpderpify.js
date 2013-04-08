@@ -19,7 +19,7 @@ as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
 	var checkComments = function() {
 		var els = findUnderpedElements();
 		for (var i in els) {
-			if ( ! els[i].isDerped) {
+			if ( ! els[i].derpedHTML) {
 				makeElementDerped(els[i]);
 			}
 		}
@@ -41,12 +41,12 @@ as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
 	};
 
 	var makeElementDerped = function(el) {
-		el.originalHTML = el.innerHTML;
 		var generatorI = Math.floor(Math.random() * generators.length);
+		el.originalHTML = el.innerHTML;
 		el.derpedHTML = generators[generatorI](el);
 		el.innerHTML = el.derpedHTML;
 		el.isDerped = true;
-		el.addEventListener('click', onElementClick);
+		el.addEventListener('click', onElementClick, true);
 	};
 
 	var onElementClick = function(event) {
@@ -54,13 +54,13 @@ as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
 	};
 
 	var toggleElementDerpidity = function(el) {
-		if (el.derpedHTML !== null) {
+		if (el.derpedHTML) {
 			if (el.isDerped) {
-				el.innerHTML = el.derpedHTML;
-				el.isDerped = true;
-			} else {
 				el.innerHTML = el.originalHTML;
 				el.isDerped = false;
+			} else {
+				el.innerHTML = el.derpedHTML;
+				el.isDerped = true;
 			}
 		}
 	};
