@@ -3,7 +3,7 @@
 
   "name": "Herp Derp for Finnish webpages",
   "description": "Inspired by \"Herp Derp for YouTube™\" -plugin, places herpder and kittens to some Finnish sites.",
-  "version": "0.0.3",
+  "version": "0.0.4",
 
   "content_scripts": [
     {
@@ -11,7 +11,8 @@
         "http://www.iltasanomat.fi/*",
         "http://www.kauppalehti.fi/*",
         "http://www.taloussanomat.fi/*",
-        "http://www.digitoday.fi/*"
+        "http://www.digitoday.fi/*",
+        "http://www.itviikko.fi/*"
       ],
       "js": ["herpderpify.js"],
       "run_at": "document_idle"
