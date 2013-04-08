@@ -88,8 +88,6 @@ as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
 		return string.replace(/[\s\n]+/g, ' ').split(' ').length;
 	};
 
-	console.log('asdf');
-
 	checkComments();
 
 })();
