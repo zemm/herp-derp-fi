@@ -50,7 +50,7 @@ as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
 	};
 
 	var onElementClick = function(event) {
-		toggleElementDerpidity(event.target);
+		toggleElementDerpidity(event.currentTarget);
 	};
 
 	var toggleElementDerpidity = function(el) {
