@@ -76,8 +76,14 @@ as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
 
 		// kittens
 		function(el) {
-			var size = generateImageSize(el);
+			var size = getSizeForImage(el);
 			return '<img src="http://placekitten.com/' + size[0] + '/' + size[1] + '" />';
+		},
+
+		// manatees
+		function(el) {
+			var size = getSizeForImage(el);
+			return '<img src="http://place.manatee.lc/' + size[0] + '/' + size[1] + '.jpg" />';
 		}
 	];
 
@@ -85,7 +91,7 @@ as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
 		return string.replace(/[\s\n]+/g, ' ').split(' ').length;
 	};
 
-	var generateImageSize = function(el) {
+	var getSizeForImage = function(el) {
 		var varW, varH;
 		if (el.offsetWidth > 0) {
 			varW = Math.max(minVarW, el.offsetWidth - minW);
